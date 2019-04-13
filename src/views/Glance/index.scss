@@ -1,0 +1,12 @@
+.glance {
+  padding: 40px;
+  @media (min-width: 1440px) {
+    margin-left: calc((100% - 1440px) / 2);
+    margin-right: calc((100% - 1440px) / 2);
+  }
+  .tile1 {
+    width: 25%;
+    height: 300px;
+    box-shadow: 0 0.5px 3px rgba(110, 109, 109, 0.5);
+  }
+}
