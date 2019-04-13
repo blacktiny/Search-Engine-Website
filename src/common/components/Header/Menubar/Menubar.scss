@@ -1,0 +1,44 @@
+.menuBar {
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+  .btn {
+    font-family: 'Lato Regular';
+    font-size: 12pt;
+    color: #4E4E4E;
+    height: 30px;
+    border-color: transparent;
+    background-color: transparent;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+      color: black;
+    }
+  }
+  .btn-text {
+    margin: 0 5px;
+  }
+  .menuItems-section {
+    width: calc(100% - 160px);
+    padding-left: 160px;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+  }
+  .settings-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 160px;
+    .btn-settings {
+
+    }
+    .btn-tools {
+      width: 80px;
+      &:hover {
+        border: solid 1px #4E4E4E;
+        color: #4E4E4E;
+      }
+    }
+  }
+}

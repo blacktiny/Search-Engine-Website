@@ -11,6 +11,12 @@
 }
 
 @font-face {
+  font-family: 'Lato Medium';
+  font-style: normal;
+  src: url('./assets/fonts/Lato-Medium.ttf');
+}
+
+@font-face {
   font-family: 'Lato Bold';
   font-style: Bold;
   src: url('./assets/fonts/Lato-Bold.ttf');
@@ -19,5 +25,5 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Lato Regular';
 }

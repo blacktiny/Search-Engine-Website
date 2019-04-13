@@ -6,15 +6,10 @@
   @media (max-width: 1024px) {
     height: 70px;
   }
-  background-color: yellow;
-  @media (min-width: 1440px) {
-    margin-left: calc((100% - 1440px) / 2);
-    margin-right: calc((100% - 1440px) / 2);
-  }
   .logo-section {
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 28%;
     @media (max-width: 1024px) {
       width: 25%;
     }
@@ -24,7 +19,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 44%;
     @media (max-width: 1024px) {
       width: 50%;
     }
@@ -40,9 +35,10 @@
       .input-search-key {
         width: calc(100% - 80px);
         font-family: 'Lato Regular';
-        font-size: 18pt;
+        font-size: 16pt;
         letter-spacing: 1.2pt;
         margin: 10px 0 10px 20px;
+        color: #4E4E4E;
         border: none;
         background-color: transparent;
         outline: none;
@@ -57,38 +53,43 @@
         }
       }
     }
+  }
+  .avatar-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 28%;
+    @media (max-width: 1024px) {
+      width: 25%;
+    }
     .voice-btn-section {
       margin-left: 15px;
       &:hover {
         cursor: pointer;
       }
     }
-  }
-  .avatar-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    width: 30%;
-    @media (max-width: 1024px) {
-      width: 25%;
-    }
-    .apps-btn-section {
-      margin-top: 5px;
-      margin-right: 20px;
-      &:hover {
-        cursor: pointer;
+    .right-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .apps-btn-section {
+        margin-top: 5px;
+        margin-right: 20px;
+        &:hover {
+          cursor: pointer;
+        }
       }
-    }
-    .notify-btn-section {
-      margin-right: 20px;
-      &:hover {
-        cursor: pointer;
+      .notify-btn-section {
+        margin-right: 20px;
+        &:hover {
+          cursor: pointer;
+        }
       }
-    }
-    .avatar-btn-section {
-      &:hover {
-        cursor: pointer;
+      .avatar-btn-section {
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }

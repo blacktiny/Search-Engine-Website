@@ -30,19 +30,21 @@ class Searchbar extends Component {
               <img src={btn_search_img} alt={'Search'} />
             </div>
           </div>
+        </div>
+        <div className='avatar-section'>
           <div className='voice-btn-section'>
             <img src={btn_voice_img} alt={'Voice'} />
           </div>
-        </div>
-        <div className='avatar-section'>
-          <div className='apps-btn-section'>
-            <img src={btn_apps_img} alt={'Apps'} />
-          </div>
-          <div className='notify-btn-section'>
-            <img src={btn_notify_img} alt={'Notify'} />
-          </div>
-          <div className='avatar-btn-section'>
-            <img src={btn_avatar_img} alt={'Avatar'} />
+          <div className='right-section'>
+            <div className='apps-btn-section'>
+              <img src={btn_apps_img} alt={'Apps'} />
+            </div>
+            <div className='notify-btn-section'>
+              <img src={btn_notify_img} alt={'Notify'} />
+            </div>
+            <div className='avatar-btn-section'>
+              <img src={btn_avatar_img} alt={'Avatar'} />
+            </div>
           </div>
         </div>
       </div>
