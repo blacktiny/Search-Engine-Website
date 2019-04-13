@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import MenuItem from '../MenuItem/MenuItem'
+import DropdownMenu from '../../DropdownMenu'
 
 import './Menubar.scss'
 
@@ -17,6 +18,10 @@ class Menubar extends Component {
     this.setState({ curSelectedItemName: itemName })
   }
 
+  onDropdownMenuItemClicked = itemName => {
+
+  }
+
   render() {
     const { curSelectedItemName } = this.state
 
@@ -29,11 +34,7 @@ class Menubar extends Component {
           <MenuItem itemName={'News'} isClicked={curSelectedItemName === 'News'} onItemClicked={(itemName) => this.onItemClicked(itemName)} />
           <MenuItem itemName={'Videos'} isClicked={curSelectedItemName === 'Videos'} onItemClicked={(itemName) => this.onItemClicked(itemName)} />
           <MenuItem itemName={'Maps'} isClicked={curSelectedItemName === 'Maps'} onItemClicked={(itemName) => this.onItemClicked(itemName)} />
-          <button className='btn btn-settings'>
-            <div className='btn-text'>
-              {'More'}
-            </div>
-          </button>
+          <DropdownMenu menuName={'More'} menuItems={['Maps', 'Books', 'Shopping', 'Finance']} onItemClicked={(itemName) => this.onDropdownMenuItemClicked(itemName)} />
         </div>
         <div className='settings-section'>
           <button className='btn btn-settings'>{'Settings'}</button>
