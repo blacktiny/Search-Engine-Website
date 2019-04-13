@@ -5,13 +5,49 @@ import DropdownMenu from '../../DropdownMenu'
 
 import './Menubar.scss'
 
+let dispMenuItems = ['Glance', 'All', 'Images', 'News', 'Videos', 'Maps']
+let moreItems = ['Books', 'Shopping', 'Finance']
+
 class Menubar extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      curSelectedItemName: ''
+      curSelectedItemName: 'Glance'
     }
+  }
+
+  componentWillMount () {
+    this.updateDimensions()
+  }
+
+  componentDidMount () {
+    window.addEventListener('resize', this.updateDimensions)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('resize', this.updateDimensions)
+  }
+
+  updateDimensions = () => {
+    if (window.innerWidth < 370) {
+      dispMenuItems = ['Glance', 'All']
+      moreItems = ['Images', 'News', 'Videos', 'Maps', 'Books', 'Shopping', 'Finance']
+    } else if (window.innerWidth < 440) {
+      dispMenuItems = ['Glance', 'All', 'Images']
+      moreItems = ['News', 'Videos', 'Maps', 'Books', 'Shopping', 'Finance']
+    } else if (window.innerWidth < 510) {
+      dispMenuItems = ['Glance', 'All', 'Images', 'News']
+      moreItems = ['Videos', 'Maps', 'Books', 'Shopping', 'Finance']
+    } else if (window.innerWidth < 580) {
+      dispMenuItems = ['Glance', 'All', 'Images', 'News', 'Videos']
+      moreItems = ['Maps', 'Books', 'Shopping', 'Finance']
+    } else {
+      dispMenuItems = ['Glance', 'All', 'Images', 'News', 'Videos', 'Maps']
+      moreItems = ['Books', 'Shopping', 'Finance']
+    }
+
+    this.setState({ curSelectedItemName: this.state.curSelectedItemName })
   }
 
   onItemClicked = itemName => {
@@ -22,19 +58,27 @@ class Menubar extends Component {
 
   }
 
-  render() {
+  renderDispMenuItems = () => {
     const { curSelectedItemName } = this.state
 
+    return dispMenuItems.map((item, index) => {
+      return (
+        <MenuItem
+          key={ index }
+          itemName={ item }
+          isClicked={ curSelectedItemName === item }
+          onItemClicked={ (itemName) => this.onItemClicked(itemName) }
+        />
+      )
+    })
+  }
+
+  render() {
     return (
       <div className='menuBar'>
         <div className='menuItems-section'>
-          <MenuItem itemName={'Glance'} isClicked={curSelectedItemName === 'Glance'} onItemClicked={(itemName) => this.onItemClicked(itemName)} />
-          <MenuItem itemName={'All'} isClicked={curSelectedItemName === 'All'} onItemClicked={(itemName) => this.onItemClicked(itemName)} />
-          <MenuItem itemName={'Images'} isClicked={curSelectedItemName === 'Images'} onItemClicked={(itemName) => this.onItemClicked(itemName)} />
-          <MenuItem itemName={'News'} isClicked={curSelectedItemName === 'News'} onItemClicked={(itemName) => this.onItemClicked(itemName)} />
-          <MenuItem itemName={'Videos'} isClicked={curSelectedItemName === 'Videos'} onItemClicked={(itemName) => this.onItemClicked(itemName)} />
-          <MenuItem itemName={'Maps'} isClicked={curSelectedItemName === 'Maps'} onItemClicked={(itemName) => this.onItemClicked(itemName)} />
-          <DropdownMenu menuName={'More'} menuItems={['Maps', 'Books', 'Shopping', 'Finance']} onItemClicked={(itemName) => this.onDropdownMenuItemClicked(itemName)} />
+          { this.renderDispMenuItems() }
+          <DropdownMenu menuName={'More'} menuItems={moreItems} onItemClicked={(itemName) => this.onDropdownMenuItemClicked(itemName)} />
         </div>
         <div className='settings-section'>
           <button className='btn btn-settings'>{'Settings'}</button>

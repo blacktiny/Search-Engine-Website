@@ -19,7 +19,7 @@ class DropdownMenu extends Component {
   }
 
   onDropdownMenuItemClicked = (item) => {
-
+    this.setState({ dropdownIsOpen: false })
   }
 
   render() {

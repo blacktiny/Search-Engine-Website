@@ -6,7 +6,7 @@ class Glance extends Component {
   render() {
     return (
       <div className='glance'>
-        asdfasdf
+        
       </div>
     );
   }

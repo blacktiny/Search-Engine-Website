@@ -2,9 +2,19 @@
   display: flex;
   flex-direction: row;
   height: 48px;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 120%;
+    height: 1.5px;
+    background-color: rgba(138, 135, 135, 0.1);
+    left: -10%;
+    margin-top: 47px;
+    z-index: 50;
+  }
   .btn {
     font-family: 'Lato Regular';
-    font-size: 12pt;
+    font-size: 11pt;
     color: #4E4E4E;
     height: 30px;
     border-color: transparent;
@@ -24,20 +34,38 @@
     display: flex;
     justify-content: center;
     padding-top: 15px;
+    @media (max-width: 1024px) {
+      width: calc(100% - 100px);
+      padding-left: 100px;
+      justify-content: left;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      padding-left: 0px;
+      justify-content: left;
+    }
   }
   .settings-section {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 160px;
-    .btn-settings {
-
+    @media (max-width: 768px) {
+      width: 110px;
     }
     .btn-tools {
-      width: 80px;
+      width: 70px;
+      margin-left: 10px;
       &:hover {
-        border: solid 1px #4E4E4E;
+        box-shadow: 0 0px 2px rgba(110, 109, 109, 0.5);
         color: #4E4E4E;
+      }
+      @media (max-width: 768px) {
+        width: 48px;
+        margin-left: 0px;
+        &:hover {
+          box-shadow: none;
+        }
       }
     }
   }
