@@ -5,7 +5,7 @@ import './Menubar.scss'
 class Menubar extends Component {
   render() {
     return (
-      <div className='menu'>
+      <div className='menuBar'>
         
       </div>
     );

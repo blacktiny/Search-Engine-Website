@@ -9,8 +9,8 @@ import './App.scss';
 class App extends Component {
   render() {
     return (
-      <Router className="App">
-        <Header className="App-header" />
+      <Router>
+        <Header />
         <Route exact path='/' component={Glance} />
       </Router>
     );
