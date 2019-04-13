@@ -5,11 +5,11 @@ function Dot (props) {
   return (
     <span style={{
       display: 'inline-block',
-      height: '8px',
-      width: '8px',
+      height: '6px',
+      width: '6px',
       borderRadius: '4px',
-      backgroundColor: 'white',
-      margin: '7px 5px',
+      backgroundColor: '#4E4E4E',
+      margin: '7px 2px',
       opacity: props.selected ? '1' : '0.3',
       transitionDuration: '300ms'
     }} />

@@ -5,8 +5,9 @@
     margin-right: calc((100% - 1440px) / 2);
   }
   .tile1 {
-    width: 25%;
-    height: 300px;
+    width: 320px;
+    height: 260px;
+    border-radius: 3px;
     box-shadow: 0 0.5px 3px rgba(110, 109, 109, 0.5);
   }
 }
