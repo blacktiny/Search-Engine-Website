@@ -8,8 +8,8 @@ class Photos extends Component {
       <div className='photos'>
         <div className='category'>{'Photos'}</div>
       </div>
-    );
+    )
   }
 }
 
-export default Photos;
+export default Photos

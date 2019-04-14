@@ -6,6 +6,9 @@
   background-image: url('../../../assets/images/bg_photo.png');
   background-repeat: no-repeat;
   padding: 25px;
+  &:hover {
+    cursor: pointer;
+  }
   .category {
     font-family: 'Lato Black';
     font-size: 18px;

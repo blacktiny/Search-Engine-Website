@@ -31,8 +31,8 @@ class Videos extends Component {
           onReady={this._onReady}
         /> */}
       </div>
-    );
+    )
   }
 }
 
-export default Videos;
+export default Videos

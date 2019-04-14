@@ -85,8 +85,8 @@ class Menubar extends Component {
           <button className='btn btn-tools'>{'Tools'}</button>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Menubar;
+export default Menubar

@@ -48,8 +48,8 @@ class Searchbar extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Searchbar;
+export default Searchbar

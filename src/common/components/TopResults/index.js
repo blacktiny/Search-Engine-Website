@@ -51,8 +51,8 @@ class TopResults extends Component {
           </Carousel>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default TopResults;
+export default TopResults

@@ -12,8 +12,8 @@ class Header extends Component {
         <Searchbar />
         <Menubar />
       </div>
-    );
+    )
   }
 }
 
-export default Header;
+export default Header
