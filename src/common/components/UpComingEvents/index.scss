@@ -37,6 +37,9 @@
         img {
           width: 17px;
           height: 18px;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
       .event-subTitle {

@@ -6,6 +6,7 @@ import Photos from '../../common/components/Photos'
 import Maps from '../../common/components/Maps'
 import About from '../../common/components/About'
 import UpcomingEvents from '../../common/components/UpComingEvents'
+import ThingsToDo from '../../common/components/ThingsToDo'
 
 import './index.scss'
 
@@ -30,6 +31,9 @@ class Glance extends Component {
         </div>
         <div className='tile1 tile-upcoming'>
           <UpcomingEvents />
+        </div>
+        <div className='tile1 tile-things'>
+          <ThingsToDo />
         </div>
       </div>
     )
