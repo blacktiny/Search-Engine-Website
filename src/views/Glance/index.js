@@ -10,6 +10,7 @@ import ThingsToDo from '../../common/components/ThingsToDo'
 import Weather from '../../common/components/Weather'
 import Flights from '../../common/components/Flights'
 import Hotels from '../../common/components/Hotels'
+import Translator from '../../common/components/Translator'
 
 import './index.scss'
 
@@ -46,6 +47,9 @@ class Glance extends Component {
         </div>
         <div className='tile2 tile-hotels'>
           <Hotels />
+        </div>
+        <div className='tile3 tile-translator'>
+          <Translator />
         </div>
       </div>
     )

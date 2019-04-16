@@ -19,7 +19,7 @@ const styles = {
     cursor: 'pointer',
     userSelect: 'none',
     position: 'absolute',
-    top: '-215px',
+    top: '-150px',
     bottom: '0',
     borderRadius: '4px',
     display: 'flex',

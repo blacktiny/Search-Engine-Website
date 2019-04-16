@@ -22,29 +22,32 @@
       background-color: rgba(138, 135, 135, 0.1);
     }
   }
-  .content {
-    height: 142px;
-    display: flex;
-    flex-direction: row;
-    .thing {
-      height: 100%;
+  .carousel-content {
+    height: 190px;
+    .content {
+      height: 137px;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 30px 20px 20px 20px;
-      &-header-section {
+      flex-direction: row;
+      .thing {
+        height: 100%;
         display: flex;
         flex-direction: column;
-      }
-      &-name {
-        font-family: 'Lato Bold';
-        font-size: 16px;
-        color: #212121;
-      }
-      &-intro {
-        font-family: 'Lato Medium';
-        font-size: 13px;
-        color: #212121;
+        justify-content: space-between;
+        padding: 30px 20px 25px 25px;
+        &-header-section {
+          display: flex;
+          flex-direction: column;
+        }
+        &-name {
+          font-family: 'Lato Bold';
+          font-size: 16px;
+          color: #212121;
+        }
+        &-intro {
+          font-family: 'Lato Medium';
+          font-size: 13px;
+          color: #212121;
+        }
       }
     }
   }
