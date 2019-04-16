@@ -8,6 +8,7 @@ import About from '../../common/components/About'
 import UpcomingEvents from '../../common/components/UpComingEvents'
 import ThingsToDo from '../../common/components/ThingsToDo'
 import Weather from '../../common/components/Weather'
+import Flights from '../../common/components/Flights'
 
 import './index.scss'
 
@@ -38,6 +39,9 @@ class Glance extends Component {
         </div>
         <div className='tile1 tile-weather'>
           <Weather />
+        </div>
+        <div className='tile2 tile-flights'>
+          <Flights />
         </div>
       </div>
     )
