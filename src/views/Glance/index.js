@@ -18,38 +18,60 @@ class Glance extends Component {
   render() {
     return (
       <div className='glance'>
-        <div className='tile1 tile-topresults'>
-          <TopResults />
+        <div className='tile tile-topresults'>
+          <div className='tile1 tile-topresults'>
+            <TopResults />
+          </div>
         </div>
-        <div className='tile1 tile-videos'>
-          <Videos />
+        <div className='tile tile-videos'>
+          <div className='tile1 tile-videos'>
+            <Videos />
+          </div>
         </div>
-        <div className='tile1 tile-photos'>
-          <Photos />
+        <div className='tile tile-photos'>
+          <div className='tile1 tile-photos'>
+            <Photos />
+          </div>
         </div>
-        <div className='tile1 tile-maps'>
-          <Maps />
+        <div className='tile tile-maps'>
+          <div className='tile1 tile-maps'>
+            <Maps />
+          </div>
         </div>
-        <div className='tile1 tile-about'>
-          <About />
+        <div className='tile tile-about'>
+          <div className='tile1 tile-about'>
+            <About />
+          </div>
         </div>
-        <div className='tile1 tile-upcoming'>
-          <UpcomingEvents />
+        <div className='tile tile-upcoming'>
+          <div className='tile1 tile-upcoming'>
+            <UpcomingEvents />
+          </div>
         </div>
-        <div className='tile1 tile-things'>
-          <ThingsToDo />
+        <div className='tile tile-things'>
+          <div className='tile1 tile-things'>
+            <ThingsToDo />
+          </div>
         </div>
-        <div className='tile1 tile-weather'>
-          <Weather />
+        <div className='tile tile-weather'>
+          <div className='tile1 tile-weather'>
+            <Weather />
+          </div>
         </div>
-        <div className='tile2 tile-flights'>
-          <Flights />
+        <div className='tile5'>
+          <div className='tile4'>
+            <div className='tile2 tile-flights'>
+              <Flights />
+            </div>
+            <div className='tile2 tile-hotels'>
+              <Hotels />
+            </div>
+          </div>
         </div>
-        <div className='tile2 tile-hotels'>
-          <Hotels />
-        </div>
-        <div className='tile3 tile-translator'>
-          <Translator />
+        <div className='tile tile-translator'>
+          <div className='tile3 tile-translator'>
+            <Translator />
+          </div>
         </div>
       </div>
     )

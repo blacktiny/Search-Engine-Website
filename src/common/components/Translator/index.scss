@@ -3,12 +3,18 @@
   height: 100%;
   display: flex;
   flex-direction: row;
+  @media (max-width: 760px) {
+    flex-direction: column;
+  }
   &-source {
     width: 50%;
     display: flex;
     flex-direction: column;
     padding: 20px 24px 15px 24px;
     border-right: solid 1px rgba(110, 109, 109, 0.2);
+    @media (max-width: 760px) {
+      width: calc(100% - 48px);
+    }
     .header-section {
       display: flex;
       flex-direction: row;
@@ -52,6 +58,9 @@
     display: flex;
     flex-direction: column;
     padding: 24px 24px 15px 24px;
+    @media (max-width: 760px) {
+      width: calc(100% - 48px);
+    }
     .header-section {
       display: flex;
       flex-direction: row;
