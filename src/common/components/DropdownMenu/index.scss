@@ -3,6 +3,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
     img {
       margin-left: 5px;
     }
@@ -11,7 +14,6 @@
       font-size: 11pt;
       color: #4E4E4E;
       &:hover {
-        cursor: pointer;
         color: black;
       }
     }
@@ -20,9 +22,6 @@
       font-size: 13px;
       letter-spacing: 0.23px;
       color: #212121;
-      &:hover {
-        cursor: pointer;
-      }
     }
   }
   .contentSection {
@@ -38,7 +37,7 @@
     margin-top: 10px;
     margin-left: -5px;
     &-weather {
-      width: 60px;
+      width: 92px;
       margin-top: -15px;
     }
     .menuItem {

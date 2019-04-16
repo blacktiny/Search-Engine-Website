@@ -17,6 +17,10 @@ class Weather extends Component {
     }
   }
 
+  onDateSelected = (date) => {
+    this.setState({ currentDate: date })
+  }
+
   onTimeSelected = (time) => {
     this.setState({curSelectedTime: time})
   }
@@ -24,6 +28,7 @@ class Weather extends Component {
   render() {
     const { currentDate, curSelectedTime } = this.state
 
+    const dateArray = ['Today', 'Yesterday']
     const timeArray = ['09:00', '12:00', '15:00', '18:00', '21:00']
     let timeSection = timeArray.map((time, index) => {
       return (
@@ -48,7 +53,7 @@ class Weather extends Component {
               <div className='temperature-symbol' />
             </div>
             <div className='date-dropdown'>
-              <DropdownMenu menuName={currentDate} menuItems={[]} showArrow={true} menuClassName={'weather'} />
+              <DropdownMenu menuName={currentDate} menuItems={dateArray} showArrow={true} menuClassName={'weather'} onItemClicked={ (date) => this.onDateSelected(date) } />
             </div>
           </div>
         </div>

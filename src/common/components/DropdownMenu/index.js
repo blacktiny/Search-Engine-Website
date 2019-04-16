@@ -15,6 +15,20 @@ class DropdownMenu extends Component {
     }
   }
 
+  componentDidMount() {
+    document.body.addEventListener('click', this.handleClickEvent)
+  }
+
+  handleClickEvent = event => {
+    const element = event.target.className
+    console.log(event.target.className)
+
+    if (element === 'menu-default' || element === 'menuItem' || element === 'menu-weather') {
+    } else {
+      this.setState({ dropdownIsOpen: false })
+    }
+  }
+
   onMenuClicked = () => {
     const { dropdownIsOpen } = this.state
     
@@ -22,7 +36,10 @@ class DropdownMenu extends Component {
   }
 
   onDropdownMenuItemClicked = (item) => {
+    const { onItemClicked } = this.props
+
     this.setState({ dropdownIsOpen: false })
+    onItemClicked(item)
   }
 
   render() {
@@ -37,7 +54,7 @@ class DropdownMenu extends Component {
     if (menuItems) {
       contentItems = menuItems.map((item, index) => {
         return (
-          <div key={index} className='menuItem' onClick={ (item) => this.onDropdownMenuItemClicked(item) }>{item}</div>
+          <div key={index} className='menuItem' onClick={ () => this.onDropdownMenuItemClicked(item) }>{item}</div>
         )
       })
     }
