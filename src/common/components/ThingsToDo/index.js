@@ -13,7 +13,7 @@ class ThingsToDo extends Component {
     return (
       <div className='things-to-do'>
         <div className='category'>{'Things To Do'}</div>
-        <Carousel widgets={Buttons}>
+        <Carousel widgets={[Buttons]}>
           <div className='content'>
             <div className='thing'>
               <div className='thing-header-section'>

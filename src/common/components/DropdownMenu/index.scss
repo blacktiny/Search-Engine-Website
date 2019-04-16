@@ -1,14 +1,30 @@
 .dropdownMenu {
-  font-family: 'Lato Regular';
-  font-size: 11pt;
-  color: #4E4E4E;
   height: 30px;
-  border-color: transparent;
-  background-color: transparent;
-  outline: none;
-  &:hover {
-    cursor: pointer;
-    color: black;
+  .menuSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+      margin-left: 5px;
+    }
+    .menu-default {
+      font-family: 'Lato Regular';
+      font-size: 11pt;
+      color: #4E4E4E;
+      &:hover {
+        cursor: pointer;
+        color: black;
+      }
+    }
+    .menu-weather {
+      font-family: 'Lato Bold';
+      font-size: 13px;
+      letter-spacing: 0.23px;
+      color: #212121;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
   .contentSection {
     display: flex;
@@ -22,6 +38,10 @@
     padding: 5px 0px;
     margin-top: 10px;
     margin-left: -5px;
+    &-weather {
+      width: 60px;
+      margin-top: -15px;
+    }
     .menuItem {
       display: flex;
       justify-content: center;
