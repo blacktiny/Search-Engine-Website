@@ -27,7 +27,7 @@ class MenuItem extends Component {
         <div className='itemContent' onClick={ () => this.onClicked() }>{itemName}</div>
         { isClicked && <div className='itemUnderline' /> }
       </div>
-    );
+    )
   }
 }
 

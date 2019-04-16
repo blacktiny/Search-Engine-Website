@@ -40,6 +40,31 @@
       width: 92px;
       margin-top: -15px;
     }
+    &-translator {
+      width: 110px;
+      height: 300px;
+      margin-top: -250px;
+      overflow: scroll;
+      overflow-x: hidden;
+    }
+    .search {
+      font-family: 'Lato Regular';
+      font-size: 11pt;
+      color: #4E4E4E;
+      border-color: transparent;
+      background-color: transparent;
+      outline: none;
+      padding-left: 13px;
+      margin-bottom: 2px;
+      &::placeholder {
+        color: #c3c3c3;
+      }
+    }
+    .splitter {
+      width: 100%;
+      border: solid 0.5px rgba(110, 109, 109, 0.2);
+      margin-bottom: 3px;
+    }
     .menuItem {
       display: flex;
       justify-content: center;

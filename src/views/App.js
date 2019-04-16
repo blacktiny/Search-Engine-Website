@@ -4,7 +4,7 @@ import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Header from '../common/components/Header'
 import Glance from './Glance'
 
-import './App.scss';
+import './App.scss'
 
 class App extends Component {
   render() {
@@ -13,8 +13,8 @@ class App extends Component {
         <Header />
         <Route exact path='/' component={Glance} />
       </Router>
-    );
+    )
   }
 }
 
-export default App;
+export default App

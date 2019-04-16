@@ -8,7 +8,7 @@ class Maps extends Component {
       <div className='maps'>
         
       </div>
-    );
+    )
   }
 }
 

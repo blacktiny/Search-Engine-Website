@@ -14,7 +14,9 @@ class Translator extends Component {
 
     this.state = {
       source_value: 'thank you',
-      target_value: 'dank je'
+      target_value: 'dank je',
+      source_language: 'English',
+      target_language: 'Dutch'
     }
   }
 
@@ -22,12 +24,26 @@ class Translator extends Component {
     this.setState({ source_value: value })
   }
 
+  onSourceLanguageSelected = (language) => {
+    this.setState({ source_language: language })
+  }
+
+  onTargetLanguageSelected = (language) => {
+    this.setState({ target_language: language })
+  }
+
   render() {
+    const languageArray = ['Afrikaans', 'Albanian', 'Amharic', 'Arabic', 'Armenian', 'Azerbaijani', 'Basque', 'Belarusian', 'Bengali', 'Bosnian', 
+      'Bulgarian', 'Catalan', 'Cebuano', 'Chichewa', 'Chinese', 'Corsican', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Esperanto', 'Estonian',
+      'Filipino', 'Finnish', 'French', 'Frisian', 'Galician', 'Georgian', 'German', 'Greek', 'Gujarati', 'Haitian Creole', 'Hausa', 'Hawaiian', 'Hebrew']
+
+    const { source_language, target_language } = this.state
+
     return (
       <div className='translator'>
         <div className='translator-source'>
           <div className='header-section'>
-            <DropdownMenu menuName={'English'} menuItems={[]} showArrow={true} />
+            <DropdownMenu menuName={source_language} menuItems={languageArray} showArrow={true} menuClassName={'translator'} onItemClicked={ (language) => this.onSourceLanguageSelected(language) } />
             <div className='features'>
               <div className='features-speak'>
                 <img src={btn_speak_img} alt={'Speak'} />
@@ -46,7 +62,7 @@ class Translator extends Component {
         </div>
         <div className='translator-target'>
           <div className='header-section'>
-            <DropdownMenu menuName={'Dutch'} menuItems={[]} showArrow={true} />
+            <DropdownMenu menuName={target_language} menuItems={languageArray} showArrow={true} menuClassName={'translator'} onItemClicked={ (language) => this.onTargetLanguageSelected(language) } />
             <div className='features'>
               <div className='features-speak'>
                 <img src={btn_speak_img} alt={'Speak'} />

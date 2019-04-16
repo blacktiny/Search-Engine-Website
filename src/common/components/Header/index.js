@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import Searchbar from './Searchbar/Searchbar'
-import Menubar from './Menubar/Menubar';
+import Menubar from './Menubar/Menubar'
 
 import './index.scss'
 
