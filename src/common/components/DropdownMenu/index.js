@@ -26,7 +26,6 @@ class DropdownMenu extends Component {
 
   handleClickEvent = event => {
     const element = event.target.className
-    console.log(event.target.className)
 
     if (element === 'menu-default' || element === 'menuItem' || element === 'menu-weather' || element === 'search') {
     } else {
