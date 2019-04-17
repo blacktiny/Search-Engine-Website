@@ -40,15 +40,13 @@ class Maps extends Component {
   }
 
   render() {
-    const { defaultInfo, geocode, searchKey } = this.state
+    const { defaultInfo, geocode } = this.state
 
     const MyMapComponent = withScriptjs(withGoogleMap((props) => (
       <GoogleMap
         defaultZoom={ defaultInfo.zoom }
         defaultCenter={ defaultInfo.center }
-      >
-        <div className='maps-info'>{ searchKey }</div>
-      </GoogleMap>
+      />
     )))
 
     return (
